@@ -11,7 +11,7 @@ public class Consumer {
 		// TODO Auto-generated method stub
 
 		ExecutorService service = Executors.newCachedThreadPool();
-		Counter counter = CounterFactory.getCounter(ThreadSafeModes.LOCK);
+		Counter counter = CounterFactory.getCounter(ThreadSafeModes.ATOMIC);
 		System.out.println("initial counter:::" + counter.getCounter());
 		IntStream inputs = IntStream.range(0, 200);
 		Consumer consumer = new Consumer();

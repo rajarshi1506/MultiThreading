@@ -13,6 +13,12 @@ public class CounterFactory {
 			return new Counter();
 		case LOCK:
 			return new LockCounter();
+		case VOLATILE:
+			return new VolatileCounter();
+		case SYNCHRONIZED_VOLATILE:
+			return new SynchronizedVolatileCounter();
+		case ATOMIC:
+			return new AtomicCounter();
 		}
 		return null;
 	}
